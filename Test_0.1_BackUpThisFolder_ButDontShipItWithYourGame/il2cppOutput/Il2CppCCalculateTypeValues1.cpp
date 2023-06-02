@@ -38636,8 +38636,10 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	int32_t ___c_13;
 	// System.Int32 PerspectiveScaling::d
 	int32_t ___d_14;
+	// System.Boolean PerspectiveScaling::isGrabbed
+	bool ___isGrabbed_15;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_15;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_16;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector

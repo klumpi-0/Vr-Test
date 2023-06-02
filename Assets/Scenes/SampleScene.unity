@@ -1414,7 +1414,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &389343373
@@ -7030,12 +7030,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1826630735}
+        m_TargetAssemblyTypeName: PerspectiveScaling, Assembly-CSharp
+        m_MethodName: objectIsGrabbed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1826630735}
         m_TargetAssemblyTypeName: PerspectiveScaling, Assembly-CSharp
         m_MethodName: ChangeMaterialSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1826630735}
+        m_TargetAssemblyTypeName: PerspectiveScaling, Assembly-CSharp
+        m_MethodName: objectIsGrabbed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7224,10 +7248,11 @@ MonoBehaviour:
   grabObject: {fileID: 1826630726}
   camera: {fileID: 1577749885}
   scalObject: {fileID: 0}
-  DebugText: {fileID: 782628377}
+  DebugText: {fileID: 389343372}
   DebugText2: {fileID: 533259420}
   c: 0
   d: 0
+  isGrabbed: 0
 --- !u!1 &1861151407
 GameObject:
   m_ObjectHideFlags: 0

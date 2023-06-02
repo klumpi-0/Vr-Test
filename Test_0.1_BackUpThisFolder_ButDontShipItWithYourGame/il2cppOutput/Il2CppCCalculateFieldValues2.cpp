@@ -24258,8 +24258,10 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	int32_t ___c_13;
 	// System.Int32 PerspectiveScaling::d
 	int32_t ___d_14;
+	// System.Boolean PerspectiveScaling::isGrabbed
+	bool ___isGrabbed_15;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_15;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_16;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
@@ -29561,9 +29563,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6879[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6880[2] = 
 {
 	static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_nameLabel_4)),static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_valueLabel_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[12] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[13] = 
 {
-	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startMaterial_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabMaterial_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___hoverMaterial_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___meshRenderer_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___scalObject_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___c_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_15)),};
+	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startMaterial_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabMaterial_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___hoverMaterial_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___meshRenderer_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___scalObject_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___c_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_15)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_16)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[3] = 
 {
 	static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___leftHandDevice_4)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___rightHandDevice_5)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___inputDevices_6)),};

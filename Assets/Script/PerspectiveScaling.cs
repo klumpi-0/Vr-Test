@@ -24,6 +24,8 @@ public class PerspectiveScaling : MonoBehaviour
     public int c;
     public int d;
 
+    public bool isGrabbed;
+
     private Transform startTransform;
 
     // Start is called before the first frame update
@@ -33,13 +35,19 @@ public class PerspectiveScaling : MonoBehaviour
         d = 0;
         meshRenderer = grabObject.GetComponent<MeshRenderer>();
         startMaterial = meshRenderer.material;
+        isGrabbed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+        if (isGrabbed)
+        {
+            DebugText.text += isGrabbed + "\n";
+            // TODO Enter zeugs zum updaten
+        }
     }
+
     public void ChangeMaterialSelect()
     {
         if (meshRenderer.material == startMaterial)
@@ -83,7 +91,7 @@ public class PerspectiveScaling : MonoBehaviour
     public void ScaleDown()
     {
         startTransform = grabObject.transform;                                                                      // Saves current scale
-        grabObject.transform.localScale = grabObject.transform.localScale - grabObject.transform.localScale / 2;    // Scales object down by 50%
+        grabObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);    // Scales object down by 50%
         DebugText2.text += grabObject.transform.localScale + "\n";                                                         // Adds scale vector to textfield
     }
 
@@ -91,5 +99,10 @@ public class PerspectiveScaling : MonoBehaviour
     {
         grabObject.transform.localScale = startTransform.localScale;                                                // Sets object back to old scale
         DebugText2.text += grabObject.transform.localScale + "\n";                                                         // Adds scale vector to textfield
+    }
+
+    public void objectIsGrabbed()
+    {
+        isGrabbed = !isGrabbed;
     }
 }
