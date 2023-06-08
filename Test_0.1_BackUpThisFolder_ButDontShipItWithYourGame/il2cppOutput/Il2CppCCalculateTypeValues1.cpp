@@ -38614,36 +38614,26 @@ struct PauseOnInputLoss_t961209F35C547C04494B55EC9BF397ECC731D088  : public Mono
 // PerspectiveScaling
 struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.Material PerspectiveScaling::startMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_4;
-	// UnityEngine.Material PerspectiveScaling::grabMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___grabMaterial_5;
-	// UnityEngine.Material PerspectiveScaling::hoverMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___hoverMaterial_6;
-	// UnityEngine.MeshRenderer PerspectiveScaling::meshRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___meshRenderer_7;
 	// UnityEngine.GameObject PerspectiveScaling::grabObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_8;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_4;
 	// UnityEngine.GameObject PerspectiveScaling::camera
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___camera_9;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___camera_5;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugTextHead
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_10;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_6;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugText2
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_11;
-	// System.Int32 PerspectiveScaling::c
-	int32_t ___c_12;
-	// System.Int32 PerspectiveScaling::d
-	int32_t ___d_13;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_7;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_14;
+	bool ___isGrabbed_8;
 	// System.Boolean PerspectiveScaling::lastIsGrabbed
-	bool ___lastIsGrabbed_15;
+	bool ___lastIsGrabbed_9;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_16;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_10;
 	// System.Single PerspectiveScaling::d0
-	float ___d0_17;
+	float ___d0_11;
 	// System.Single PerspectiveScaling::ds
-	float ___ds_18;
+	float ___ds_12;
+	// System.Single PerspectiveScaling::alpha
+	float ___alpha_13;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
