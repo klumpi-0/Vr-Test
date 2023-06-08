@@ -24244,18 +24244,22 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_6;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugText2
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_7;
+	// System.String PerspectiveScaling::Text
+	String_t* ___Text_8;
+	// System.Boolean PerspectiveScaling::canDebug
+	bool ___canDebug_9;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_8;
+	bool ___isGrabbed_10;
 	// System.Boolean PerspectiveScaling::lastIsGrabbed
-	bool ___lastIsGrabbed_9;
+	bool ___lastIsGrabbed_11;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_10;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_12;
 	// System.Single PerspectiveScaling::d0
-	float ___d0_11;
+	float ___d0_13;
 	// System.Single PerspectiveScaling::ds
-	float ___ds_12;
+	float ___ds_14;
 	// System.Single PerspectiveScaling::alpha
-	float ___alpha_13;
+	float ___alpha_15;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
@@ -29557,9 +29561,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6879[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6880[2] = 
 {
 	static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_nameLabel_4)),static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_valueLabel_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[10] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[12] = 
 {
-	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugTextHead_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___lastIsGrabbed_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d0_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___ds_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___alpha_13)),};
+	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugTextHead_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___Text_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___canDebug_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___lastIsGrabbed_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d0_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___ds_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___alpha_15)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[3] = 
 {
 	static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___leftHandDevice_4)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___rightHandDevice_5)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___inputDevices_6)),};

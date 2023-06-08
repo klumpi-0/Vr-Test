@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class PerspectiveScaling : MonoBehaviour
 
     public Text DebugTextHead;
     public Text DebugText2;
+    private string Text;
+    private bool canDebug;
 
     public bool isGrabbed;              // gives us true if we are currently grabbing the object
     public bool lastIsGrabbed;          // isGrabbed value of the last frame  
@@ -26,6 +29,14 @@ public class PerspectiveScaling : MonoBehaviour
     void Start()
     {
         isGrabbed = false;
+        if (DebugTextHead != null)
+        {
+            canDebug = true;
+        }
+        else
+        {
+            canDebug = false;
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +74,11 @@ public class PerspectiveScaling : MonoBehaviour
         d0 = Vector3.Distance(grabObject.transform.position, camera.transform.position);
         float middle = (startTransform.localScale.x + startTransform.localScale.y + startTransform.localScale.z) / 3;
         alpha = 2 * Mathf.Rad2Deg * Mathf.Atan(middle / 2 * d0);        // Uses forced perspective
+        if (canDebug)
+        {
+            Text = alpha.ToString() + "\nTest";
+            DebugTextHead.text = Text;
+        }
         // d0 = d0 - middle / 2;
     }
 
@@ -77,5 +93,11 @@ public class PerspectiveScaling : MonoBehaviour
         float newh = (2 * Mathf.Rad2Deg * Mathf.Tan(alpha / 2)) / ds;
         // grabObject.transform.localScale = new Vector3(newh, newh, newh);
         grabObject.transform.localScale = startTransform.localScale * (ds / d0);
+        if (canDebug)
+        {
+            float newalpha = 2 * Mathf.Rad2Deg * Mathf.Atan(middle / 2 * d0);
+            Text = Text.Remove(Text.TrimEnd().LastIndexOf(Environment.NewLine));
+            Text = Text + "\n" + newalpha;
+        }
     }
 }

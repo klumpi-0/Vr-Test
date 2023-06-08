@@ -38622,18 +38622,22 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_6;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugText2
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_7;
+	// System.String PerspectiveScaling::Text
+	String_t* ___Text_8;
+	// System.Boolean PerspectiveScaling::canDebug
+	bool ___canDebug_9;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_8;
+	bool ___isGrabbed_10;
 	// System.Boolean PerspectiveScaling::lastIsGrabbed
-	bool ___lastIsGrabbed_9;
+	bool ___lastIsGrabbed_11;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_10;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_12;
 	// System.Single PerspectiveScaling::d0
-	float ___d0_11;
+	float ___d0_13;
 	// System.Single PerspectiveScaling::ds
-	float ___ds_12;
+	float ___ds_14;
 	// System.Single PerspectiveScaling::alpha
-	float ___alpha_13;
+	float ___alpha_15;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector

@@ -2326,9 +2326,21 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1577749885}
+    - target: {fileID: 3650608004627516682, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
+      propertyPath: DebugTextHead
+      value: 
+      objectReference: {fileID: 389343372}
+    - target: {fileID: 3650608004627516687, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
+      propertyPath: m_SmoothPosition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3650608004627516687, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
+      propertyPath: m_SmoothRotation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3650608004627516687, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
       propertyPath: m_UseDynamicAttach
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3650608004627516687, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
       propertyPath: m_InteractionManager
