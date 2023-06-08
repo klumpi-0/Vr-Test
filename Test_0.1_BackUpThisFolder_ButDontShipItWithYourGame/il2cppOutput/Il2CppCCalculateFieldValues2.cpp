@@ -24248,20 +24248,24 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_8;
 	// UnityEngine.GameObject PerspectiveScaling::camera
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___camera_9;
-	// UnityEngine.GameObject PerspectiveScaling::scalObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scalObject_10;
-	// UnityEngine.UI.Text PerspectiveScaling::DebugText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_11;
+	// UnityEngine.UI.Text PerspectiveScaling::DebugTextHead
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_10;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugText2
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_12;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_11;
 	// System.Int32 PerspectiveScaling::c
-	int32_t ___c_13;
+	int32_t ___c_12;
 	// System.Int32 PerspectiveScaling::d
-	int32_t ___d_14;
+	int32_t ___d_13;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_15;
+	bool ___isGrabbed_14;
+	// System.Boolean PerspectiveScaling::lastIsGrabbed
+	bool ___lastIsGrabbed_15;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_16;
+	// System.Single PerspectiveScaling::d0
+	float ___d0_17;
+	// System.Single PerspectiveScaling::ds
+	float ___ds_18;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
@@ -29563,9 +29567,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6879[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6880[2] = 
 {
 	static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_nameLabel_4)),static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_valueLabel_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[13] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[15] = 
 {
-	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startMaterial_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabMaterial_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___hoverMaterial_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___meshRenderer_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___scalObject_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___c_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_15)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_16)),};
+	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startMaterial_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabMaterial_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___hoverMaterial_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___meshRenderer_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugTextHead_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugText2_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___c_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___lastIsGrabbed_15)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_16)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d0_17)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___ds_18)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[3] = 
 {
 	static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___leftHandDevice_4)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___rightHandDevice_5)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___inputDevices_6)),};

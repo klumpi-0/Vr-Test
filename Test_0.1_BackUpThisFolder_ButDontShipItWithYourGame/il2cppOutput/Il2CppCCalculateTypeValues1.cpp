@@ -38626,20 +38626,24 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_8;
 	// UnityEngine.GameObject PerspectiveScaling::camera
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___camera_9;
-	// UnityEngine.GameObject PerspectiveScaling::scalObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___scalObject_10;
-	// UnityEngine.UI.Text PerspectiveScaling::DebugText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_11;
+	// UnityEngine.UI.Text PerspectiveScaling::DebugTextHead
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugTextHead_10;
 	// UnityEngine.UI.Text PerspectiveScaling::DebugText2
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_12;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText2_11;
 	// System.Int32 PerspectiveScaling::c
-	int32_t ___c_13;
+	int32_t ___c_12;
 	// System.Int32 PerspectiveScaling::d
-	int32_t ___d_14;
+	int32_t ___d_13;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_15;
+	bool ___isGrabbed_14;
+	// System.Boolean PerspectiveScaling::lastIsGrabbed
+	bool ___lastIsGrabbed_15;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_16;
+	// System.Single PerspectiveScaling::d0
+	float ___d0_17;
+	// System.Single PerspectiveScaling::ds
+	float ___ds_18;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
