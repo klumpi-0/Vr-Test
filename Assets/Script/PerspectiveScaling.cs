@@ -11,11 +11,16 @@ public class PerspectiveScaling : MonoBehaviour
 {
     public GameObject  grabObject;      // Object which should be scaled
     public GameObject camera;           // Camere through which the player looks (Take from XR Origin)
+    public GameObject reference;
 
     public Text DebugTextHead;
-    public Text DebugText2;
+    public Text DebugTextHead2;
     private string Text;
-    private bool canDebug;
+    private int c;
+
+    public Material startMaterial;
+    public Material grabMaterial;
+    private MeshRenderer meshRenderer;
 
     public bool isGrabbed;              // gives us true if we are currently grabbing the object
     public bool lastIsGrabbed;          // isGrabbed value of the last frame  
@@ -28,15 +33,9 @@ public class PerspectiveScaling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        c = 0;
         isGrabbed = false;
-        if (DebugTextHead != null)
-        {
-            canDebug = true;
-        }
-        else
-        {
-            canDebug = false;
-        }
+        meshRenderer = grabObject.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -47,12 +46,16 @@ public class PerspectiveScaling : MonoBehaviour
             // TODO Enter what should be updated
             if (!lastIsGrabbed)
             {
-                calculateOriginalScale();
+                onGrab();
             }
             updateSacle();
         }
         if (!isGrabbed)
         {
+            if (lastIsGrabbed)
+            {
+                onLeave();
+            }
         }
 
         lastIsGrabbed = isGrabbed;      // Allways have to be the last line in the Update Method
@@ -65,6 +68,34 @@ public class PerspectiveScaling : MonoBehaviour
     {
         isGrabbed = !isGrabbed;
     }
+
+    /// <summary>
+    /// Is called when object is grabbed
+    /// </summary>
+    public void onGrab()
+    {
+        calculateOriginalScale();
+        //createReference();
+        if(grabMaterial != null)
+        {
+            startMaterial = meshRenderer.material;
+            meshRenderer.material = grabMaterial;
+
+        }
+
+    }
+
+    /// <summary>
+    /// Used to create 
+    /// </summary>
+    public void createReference()
+    {
+        reference = Instantiate(reference, grabObject.transform.position, grabObject.transform.rotation);
+        reference.transform.localScale = grabObject.transform.localScale;
+        reference.transform.parent = grabObject.transform;
+        DebugTextHead.text = "Created Reference";
+    }
+
     /// <summary>
     /// Calculates initial values when the object is grabbed
     /// </summary>
@@ -74,9 +105,10 @@ public class PerspectiveScaling : MonoBehaviour
         d0 = Vector3.Distance(grabObject.transform.position, camera.transform.position);
         float middle = (startTransform.localScale.x + startTransform.localScale.y + startTransform.localScale.z) / 3;
         alpha = 2 * Mathf.Rad2Deg * Mathf.Atan(middle / 2 * d0);        // Uses forced perspective
-        if (canDebug)
+        if (DebugTextHead != null)
         {
-            Text = alpha.ToString() + "\nTest";
+            c = 0;
+            Text = "Start " + alpha.ToString() + "Deg";
             DebugTextHead.text = Text;
         }
         // d0 = d0 - middle / 2;
@@ -93,11 +125,22 @@ public class PerspectiveScaling : MonoBehaviour
         float newh = (2 * Mathf.Rad2Deg * Mathf.Tan(alpha / 2)) / ds;
         // grabObject.transform.localScale = new Vector3(newh, newh, newh);
         grabObject.transform.localScale = startTransform.localScale * (ds / d0);
-        if (canDebug)
+        if (DebugTextHead2 != null)
         {
+            c += 1;
             float newalpha = 2 * Mathf.Rad2Deg * Mathf.Atan(middle / 2 * d0);
-            Text = Text.Remove(Text.TrimEnd().LastIndexOf(Environment.NewLine));
-            Text = Text + "\n" + newalpha;
+            DebugTextHead2.text = c%100 + " " + newalpha.ToString() + "Deg";
+        }
+    }
+   
+    /// <summary>
+    /// Get's called when the player lets the object go
+    /// </summary>
+    public void onLeave()
+    {
+        if(startMaterial != null)
+        {
+            meshRenderer.material = startMaterial;
         }
     }
 }
