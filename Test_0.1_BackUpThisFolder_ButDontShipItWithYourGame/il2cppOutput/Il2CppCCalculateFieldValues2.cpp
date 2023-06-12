@@ -24539,20 +24539,22 @@ struct ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A  : public Mon
 	float ___d0_9;
 	// System.Single ScalingGunPointer::ds
 	float ___ds_10;
+	// TMPro.TextMeshProUGUI ScalingGunPointer::selectButtonText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___selectButtonText_11;
 	// UnityEngine.Material ScalingGunPointer::rayHitMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___rayHitMaterial_11;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___rayHitMaterial_12;
 	// UnityEngine.Material ScalingGunPointer::startMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_12;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_13;
 	// UnityEngine.UI.Text ScalingGunPointer::DebugText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_13;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_14;
 	// UnityEngine.RaycastHit ScalingGunPointer::raycastHit
-	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___raycastHit_14;
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___raycastHit_15;
 	// System.Boolean ScalingGunPointer::isGrabbed
-	bool ___isGrabbed_15;
+	bool ___isGrabbed_16;
 	// System.Boolean ScalingGunPointer::isSelected
-	bool ___isSelected_16;
+	bool ___isSelected_17;
 	// System.Boolean ScalingGunPointer::lastIsSelected
-	bool ___lastIsSelected_17;
+	bool ___lastIsSelected_18;
 };
 
 // ScalingTest
@@ -29803,9 +29805,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6880[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6881[16] = 
 {
 	static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabObject_4)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___camera_5)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___reference_6)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugTextHead_7)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___DebugTextHead2_8)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___Text_9)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___c_10)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startMaterial_11)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___grabMaterial_12)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___meshRenderer_13)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___isGrabbed_14)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___lastIsGrabbed_15)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___startTransform_16)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___d0_17)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___ds_18)),static_cast<int32_t>(offsetof(PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2, ___alpha_19)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[14] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[15] = 
 {
-	static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___sphere_4)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___middlePoint_5)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___laser_6)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___scaleObject_7)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startTransform_8)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___d0_9)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___ds_10)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___rayHitMaterial_11)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startMaterial_12)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___DebugText_13)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___raycastHit_14)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isGrabbed_15)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isSelected_16)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___lastIsSelected_17)),};
+	static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___sphere_4)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___middlePoint_5)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___laser_6)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___scaleObject_7)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startTransform_8)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___d0_9)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___ds_10)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___selectButtonText_11)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___rayHitMaterial_12)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startMaterial_13)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___DebugText_14)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___raycastHit_15)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isGrabbed_16)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isSelected_17)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___lastIsSelected_18)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6883[3] = 
 {
 	static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___leftHandDevice_4)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___rightHandDevice_5)),static_cast<int32_t>(offsetof(ScalingTest_tF56FE52E6C4BE7E6BC0A0E193FD435822AC3E034, ___inputDevices_6)),};

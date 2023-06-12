@@ -4589,7 +4589,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2146909620}
         m_TargetAssemblyTypeName: ScalingGunPointer, Assembly-CSharp
-        m_MethodName: SelectIsScaleObject
+        m_MethodName: ChangeIsSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8171,7 +8171,7 @@ GameObject:
   - component: {fileID: 1695572870}
   - component: {fileID: 1695572869}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: TextSelect (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8184,8 +8184,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695572867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004172325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8194,7 +8194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000069618225}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695572869
@@ -10849,6 +10849,7 @@ MonoBehaviour:
   sphere: {fileID: 1042218226}
   middlePoint: {fileID: 2146909615}
   laser: {fileID: 1282604649}
+  selectButtonText: {fileID: 1695572869}
   rayHitMaterial: {fileID: 2100006, guid: 461f0170c82b53340a9812199b63bbd4, type: 3}
   DebugText: {fileID: 389343372}
 --- !u!1001 &3650608003232915781

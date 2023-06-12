@@ -38981,20 +38981,22 @@ struct ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A  : public Mon
 	float ___d0_9;
 	// System.Single ScalingGunPointer::ds
 	float ___ds_10;
+	// TMPro.TextMeshProUGUI ScalingGunPointer::selectButtonText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___selectButtonText_11;
 	// UnityEngine.Material ScalingGunPointer::rayHitMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___rayHitMaterial_11;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___rayHitMaterial_12;
 	// UnityEngine.Material ScalingGunPointer::startMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_12;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_13;
 	// UnityEngine.UI.Text ScalingGunPointer::DebugText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_13;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___DebugText_14;
 	// UnityEngine.RaycastHit ScalingGunPointer::raycastHit
-	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___raycastHit_14;
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ___raycastHit_15;
 	// System.Boolean ScalingGunPointer::isGrabbed
-	bool ___isGrabbed_15;
+	bool ___isGrabbed_16;
 	// System.Boolean ScalingGunPointer::isSelected
-	bool ___isSelected_16;
+	bool ___isSelected_17;
 	// System.Boolean ScalingGunPointer::lastIsSelected
-	bool ___lastIsSelected_17;
+	bool ___lastIsSelected_18;
 };
 
 // ScalingTest

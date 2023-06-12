@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class ScalingGunPointer : MonoBehaviour
     private Transform startTransform;
     private float d0;
     private float ds;
+
+    public TextMeshProUGUI selectButtonText;
 
     public Material rayHitMaterial;
     private Material startMaterial;
@@ -51,7 +54,10 @@ public class ScalingGunPointer : MonoBehaviour
         }
         if (!isSelected)
         {
+            if (lastIsSelected)
+            {
 
+            }
         }
         lastIsSelected = isSelected;
     }
@@ -89,6 +95,11 @@ public class ScalingGunPointer : MonoBehaviour
         }
     }
 
+    public void ChangeIsSelected()
+    {
+        isSelected = !isSelected;
+    }
+
     public void changeIsGrabbed()
     {
         isGrabbed = !isGrabbed;
@@ -103,8 +114,19 @@ public class ScalingGunPointer : MonoBehaviour
     {
         scaleObject = raycastHit.transform.gameObject;
         startTransform = scaleObject.transform;
+        scaleObject.GetComponent<Rigidbody>().useGravity = false;
         d0 = Vector3.Distance(middlePoint.transform.position, scaleObject.transform.position);
+
         DebugText.text = "Selected " + scaleObject.name;
+        selectButtonText.text = "Unselect";
+    }
+
+    public void UnselectIsScaleObject()
+    {
+        scaleObject.GetComponent<Rigidbody>().useGravity = true;
+
+        DebugText.text = "New Text";
+        selectButtonText.text = "Select";
     }
 
     public void UpdateScale()
