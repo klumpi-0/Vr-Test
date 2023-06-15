@@ -8203,8 +8203,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_ShootRay_mFA1D8A516A09
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_showLaser_m96DDDE3D61A9C867CF4A06DD7757692FA434F9B7 (ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A* __this, const RuntimeMethod* method) ;
 // System.Void ScalingGunPointer::SelectIsScaleObject()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_SelectIsScaleObject_m72051219FDC9920FFB9FC60DF2A8DD9C225820CF (ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A* __this, const RuntimeMethod* method) ;
-// System.Void ScalingGunPointer::UpdateScale()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_UpdateScale_mDD99100EB8D3AD4C1B12B59628FEF503CC9967ED (ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A* __this, const RuntimeMethod* method) ;
+// System.Void ScalingGunPointer::UnselectIsScaleObject()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_UnselectIsScaleObject_mD9174205020D9470D923D34D3B977B248AC52EDB (ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_forward_mEBAB24D77FC02FC88ED880738C3B1D47C758B3EB_inline (const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3,UnityEngine.Vector3)
@@ -12649,7 +12649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_FixedUpdate_m93027211F
 		bool L_0 = __this->___isSelected_17;
 		if (!L_0)
 		{
-			goto IL_001c;
+			goto IL_0016;
 		}
 	}
 	{
@@ -12667,25 +12667,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScalingGunPointer_FixedUpdate_m93027211F
 
 IL_0016:
 	{
-		// UpdateScale();
-		ScalingGunPointer_UpdateScale_mDD99100EB8D3AD4C1B12B59628FEF503CC9967ED(__this, NULL);
-	}
-
-IL_001c:
-	{
 		// if (!isSelected)
 		bool L_2 = __this->___isSelected_17;
 		if (L_2)
 		{
-			goto IL_002b;
+			goto IL_002c;
 		}
 	}
 	{
 		// if (lastIsSelected)
 		bool L_3 = __this->___lastIsSelected_18;
+		if (!L_3)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		// UnselectIsScaleObject();
+		ScalingGunPointer_UnselectIsScaleObject_mD9174205020D9470D923D34D3B977B248AC52EDB(__this, NULL);
 	}
 
-IL_002b:
+IL_002c:
 	{
 		// lastIsSelected = isSelected;
 		bool L_4 = __this->___isSelected_17;

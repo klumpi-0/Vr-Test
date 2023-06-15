@@ -50,13 +50,13 @@ public class ScalingGunPointer : MonoBehaviour
             {
                 SelectIsScaleObject();
             }
-            UpdateScale();
+            //UpdateScale();
         }
         if (!isSelected)
         {
             if (lastIsSelected)
             {
-
+                UnselectIsScaleObject();
             }
         }
         lastIsSelected = isSelected;
