@@ -295,8 +295,8 @@ static const int32_t s_InvokerIndices[78] =
 	5858,
 	5745,
 	5745,
-	10492,
-	10492,
+	10493,
+	10493,
 	6078,
 	6078,
 	6078,
@@ -328,7 +328,7 @@ static const int32_t s_InvokerIndices[78] =
 	5745,
 	5745,
 	7417,
-	12734,
+	12735,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_Interaction_Toolkit_Samples_DeviceSimulator_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_Interaction_Toolkit_Samples_DeviceSimulator_CodeGenModule = 

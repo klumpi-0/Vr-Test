@@ -50,7 +50,6 @@ public class ScalingGunPointer : MonoBehaviour
             {
                 SelectIsScaleObject();
             }
-            //UpdateScale();
         }
         if (!isSelected)
         {
@@ -115,6 +114,7 @@ public class ScalingGunPointer : MonoBehaviour
         scaleObject = raycastHit.transform.gameObject;
         startTransform = scaleObject.transform;
         scaleObject.GetComponent<Rigidbody>().useGravity = false;
+        scaleObject.GetComponent<Collider>().enabled = false;
         d0 = Vector3.Distance(middlePoint.transform.position, scaleObject.transform.position);
 
         DebugText.text = "Selected " + scaleObject.name;
@@ -124,6 +124,7 @@ public class ScalingGunPointer : MonoBehaviour
     public void UnselectIsScaleObject()
     {
         scaleObject.GetComponent<Rigidbody>().useGravity = true;
+        scaleObject.GetComponent<Collider>().enabled = true;
 
         DebugText.text = "New Text";
         selectButtonText.text = "Select";
@@ -140,6 +141,7 @@ public class ScalingGunPointer : MonoBehaviour
         var move = middlePoint.transform.position - scaleObject.transform.position;
         move = move.normalized / 10;
         scaleObject.transform.position = scaleObject.transform.position + move;
+        UpdateScale();
     }
 
     public void pushAway()
@@ -147,5 +149,6 @@ public class ScalingGunPointer : MonoBehaviour
         var move =  scaleObject.transform.position - middlePoint.transform.position;
         move = move.normalized / 10;
         scaleObject.transform.position = scaleObject.transform.position + move;
+        UpdateScale();
     }
 }

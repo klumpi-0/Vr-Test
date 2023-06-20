@@ -11,7 +11,6 @@ public class PerspectiveScaling : MonoBehaviour
 {
     public GameObject  grabObject;      // Object which should be scaled
     public GameObject camera;           // Camere through which the player looks (Take from XR Origin)
-    public GameObject reference;
 
     public Text DebugTextHead;
     public Text DebugTextHead2;
@@ -35,6 +34,8 @@ public class PerspectiveScaling : MonoBehaviour
     {
         c = 0;
         isGrabbed = false;
+        grabObject = this.gameObject;
+        camera = Camera.main.gameObject;
         meshRenderer = grabObject.GetComponent<MeshRenderer>();
     }
 
@@ -75,7 +76,6 @@ public class PerspectiveScaling : MonoBehaviour
     public void onGrab()
     {
         calculateOriginalScale();
-        //createReference();
         if(grabMaterial != null)
         {
             startMaterial = meshRenderer.material;
@@ -85,16 +85,6 @@ public class PerspectiveScaling : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Used to create 
-    /// </summary>
-    public void createReference()
-    {
-        reference = Instantiate(reference, grabObject.transform.position, grabObject.transform.rotation);
-        reference.transform.localScale = grabObject.transform.localScale;
-        reference.transform.parent = grabObject.transform;
-        DebugTextHead.text = "Created Reference";
-    }
 
     /// <summary>
     /// Calculates initial values when the object is grabbed
