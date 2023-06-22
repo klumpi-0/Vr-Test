@@ -54,12 +54,16 @@ public class ViewScaling : MonoBehaviour
         RaycastHit hit = ShootRay();
         pointerObject = Instantiate(this.gameObject, hit.point, this.gameObject.transform.rotation);
         pointerObject.GetComponent<Collider>().enabled = false;
+        var trans = 0.1f;
+        var col = pointerObject.GetComponent<Renderer>().material.color;
+        col.a = trans;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         // Get initial values
         d0 = Vector3.Distance(camera.transform.position, this.gameObject.transform.position);
         startTransform = this.gameObject.transform;
         if (DebugText)
         {
-            DebugText.text = "Shooting ray at" + hit.transform.name; 
+            DebugText.text = "Alpha value " + col.a; 
         }
         
     }
@@ -84,6 +88,7 @@ public class ViewScaling : MonoBehaviour
         // Destroy pointer, move object to position, scale up to right size
         this.gameObject.transform.position = pointerObject.transform.position;
         this.gameObject.transform.localScale = pointerObject.transform.localScale;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = true;
         Destroy(pointerObject);
         /*
         RaycastHit hit = ShootRay();

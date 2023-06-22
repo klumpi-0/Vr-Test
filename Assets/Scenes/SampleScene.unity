@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3650608004627516680, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc928ff9a986ba349a1af79f867b05e8, type: 2}
     - target: {fileID: 3650608004627516682, guid: 5758a2e9646154d4caca86ea87bd2a99, type: 3}
       propertyPath: camera
       value: 
