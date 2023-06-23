@@ -39931,6 +39931,12 @@ struct ViewScaling_tC23CCCB89A6923864B47B698E334878CB6DA6F67  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pointerObject_11;
 	// UnityEngine.Ray ViewScaling::RayOrigin
 	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___RayOrigin_12;
+	// UnityEngine.Material ViewScaling::StartMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___StartMaterial_13;
+	// UnityEngine.Material ViewScaling::HoverMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___HoverMaterial_14;
+	// UnityEngine.Material ViewScaling::GrabMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___GrabMaterial_15;
 };
 
 // Meta.WitAi.VoiceService

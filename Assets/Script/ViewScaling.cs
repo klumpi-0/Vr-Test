@@ -18,11 +18,16 @@ public class ViewScaling : MonoBehaviour
 
     public Ray RayOrigin;
 
+    public Material StartMaterial;
+    public Material HoverMaterial;
+    public Material GrabMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
         isGrabed = false;
         camera = Camera.main;
+        StartMaterial = this.gameObject.GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
@@ -54,10 +59,13 @@ public class ViewScaling : MonoBehaviour
         RaycastHit hit = ShootRay();
         pointerObject = Instantiate(this.gameObject, hit.point, this.gameObject.transform.rotation);
         pointerObject.GetComponent<Collider>().enabled = false;
+        ActivateGrabColor();
         var trans = 0.1f;
         var col = pointerObject.GetComponent<Renderer>().material.color;
         col.a = trans;
+
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        this.gameObject.GetComponent<Collider>().enabled = false;
         // Get initial values
         d0 = Vector3.Distance(camera.transform.position, this.gameObject.transform.position);
         startTransform = this.gameObject.transform;
@@ -89,6 +97,9 @@ public class ViewScaling : MonoBehaviour
         this.gameObject.transform.position = pointerObject.transform.position;
         this.gameObject.transform.localScale = pointerObject.transform.localScale;
         this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        this.gameObject.GetComponent<Collider>().enabled = true;
+        this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        ActivateStartMaterial();
         Destroy(pointerObject);
         /*
         RaycastHit hit = ShootRay();
@@ -120,6 +131,30 @@ public class ViewScaling : MonoBehaviour
     public void changeIsGrabed()
     {
         isGrabed = !isGrabed;
+    }
+
+    public void ActivateHoverColor()
+    {
+        if(HoverMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = HoverMaterial;
+        }
+    }
+
+    public void ActivateGrabColor()
+    {
+        if (GrabMaterial != null)
+        {
+            pointerObject.gameObject.GetComponent<MeshRenderer>().material = GrabMaterial;
+        }
+    }
+
+    public void ActivateStartMaterial()
+    {
+        if(StartMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = StartMaterial;
+        }
     }
 
 }
