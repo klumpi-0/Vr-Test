@@ -38637,24 +38637,24 @@ struct PerspectiveScaling_tEE0D72AF4A47EFDBF7B19F32213C956668D77ED2  : public Mo
 	String_t* ___Text_8;
 	// System.Int32 PerspectiveScaling::c
 	int32_t ___c_9;
-	// UnityEngine.Material PerspectiveScaling::startMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___startMaterial_10;
-	// UnityEngine.Material PerspectiveScaling::grabMaterial
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___grabMaterial_11;
-	// UnityEngine.MeshRenderer PerspectiveScaling::meshRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___meshRenderer_12;
 	// System.Boolean PerspectiveScaling::isGrabbed
-	bool ___isGrabbed_13;
+	bool ___isGrabbed_10;
 	// System.Boolean PerspectiveScaling::lastIsGrabbed
-	bool ___lastIsGrabbed_14;
+	bool ___lastIsGrabbed_11;
 	// UnityEngine.Transform PerspectiveScaling::startTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_15;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___startTransform_12;
 	// System.Single PerspectiveScaling::d0
-	float ___d0_16;
+	float ___d0_13;
 	// System.Single PerspectiveScaling::ds
-	float ___ds_17;
+	float ___ds_14;
 	// System.Single PerspectiveScaling::alpha
-	float ___alpha_18;
+	float ___alpha_15;
+	// UnityEngine.Material PerspectiveScaling::StartMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___StartMaterial_16;
+	// UnityEngine.Material PerspectiveScaling::HoverMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___HoverMaterial_17;
+	// UnityEngine.Material PerspectiveScaling::GrabMaterial
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___GrabMaterial_18;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Samples.Hands.PokeGestureDetector
@@ -39937,6 +39937,12 @@ struct ViewScaling_tC23CCCB89A6923864B47B698E334878CB6DA6F67  : public MonoBehav
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___HoverMaterial_14;
 	// UnityEngine.Material ViewScaling::GrabMaterial
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___GrabMaterial_15;
+	// UnityEngine.AudioSource ViewScaling::audioSource
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource_16;
+	// UnityEngine.AudioClip ViewScaling::audioClipGrab
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___audioClipGrab_17;
+	// UnityEngine.AudioClip ViewScaling::audioClipLeave
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___audioClipLeave_18;
 };
 
 // Meta.WitAi.VoiceService

@@ -17,10 +17,6 @@ public class PerspectiveScaling : MonoBehaviour
     private string Text;
     private int c;
 
-    public Material startMaterial;
-    public Material grabMaterial;
-    private MeshRenderer meshRenderer;
-
     public bool isGrabbed;              // gives us true if we are currently grabbing the object
     public bool lastIsGrabbed;          // isGrabbed value of the last frame  
 
@@ -29,6 +25,10 @@ public class PerspectiveScaling : MonoBehaviour
     private float ds;                   // Distance between camera and current position
     private float alpha;                // Angle which takes is taken of the screen by the object
 
+    public Material StartMaterial;
+    public Material HoverMaterial;
+    public Material GrabMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,7 @@ public class PerspectiveScaling : MonoBehaviour
         isGrabbed = false;
         grabObject = this.gameObject;
         camera = Camera.main.gameObject;
-        meshRenderer = grabObject.GetComponent<MeshRenderer>();
+        StartMaterial = this.gameObject.GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
@@ -75,14 +75,8 @@ public class PerspectiveScaling : MonoBehaviour
     /// </summary>
     public void onGrab()
     {
+        ActivateGrabColor();
         calculateOriginalScale();
-        if(grabMaterial != null)
-        {
-            startMaterial = meshRenderer.material;
-            meshRenderer.material = grabMaterial;
-
-        }
-
     }
 
 
@@ -128,9 +122,30 @@ public class PerspectiveScaling : MonoBehaviour
     /// </summary>
     public void onLeave()
     {
-        if(startMaterial != null)
+        ActivateStartMaterial();
+    }
+
+    public void ActivateHoverColor()
+    {
+        if (HoverMaterial != null)
         {
-            meshRenderer.material = startMaterial;
+            this.gameObject.GetComponent<MeshRenderer>().material = HoverMaterial;
+        }
+    }
+
+    public void ActivateGrabColor()
+    {
+        if (GrabMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = GrabMaterial;
+        }
+    }
+
+    public void ActivateStartMaterial()
+    {
+        if (StartMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = StartMaterial;
         }
     }
 }

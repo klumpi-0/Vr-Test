@@ -22,6 +22,10 @@ public class ViewScaling : MonoBehaviour
     public Material HoverMaterial;
     public Material GrabMaterial;
 
+    public AudioSource audioSource;         // under main camera
+    public AudioClip audioClipGrab;
+    public AudioClip audioClipLeave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,20 +64,14 @@ public class ViewScaling : MonoBehaviour
         pointerObject = Instantiate(this.gameObject, hit.point, this.gameObject.transform.rotation);
         pointerObject.GetComponent<Collider>().enabled = false;
         ActivateGrabColor();
-        var trans = 0.1f;
-        var col = pointerObject.GetComponent<Renderer>().material.color;
-        col.a = trans;
 
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         this.gameObject.GetComponent<Collider>().enabled = false;
         // Get initial values
         d0 = Vector3.Distance(camera.transform.position, this.gameObject.transform.position);
         startTransform = this.gameObject.transform;
-        if (DebugText)
-        {
-            DebugText.text = "Alpha value " + col.a; 
-        }
-        
+
+        audioSource.PlayOneShot(audioClipGrab);
     }
 
     public void MoveAndScaleObject()
@@ -100,6 +98,7 @@ public class ViewScaling : MonoBehaviour
         this.gameObject.GetComponent<Collider>().enabled = true;
         this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ActivateStartMaterial();
+        audioSource.PlayOneShot(audioClipLeave);
         Destroy(pointerObject);
         /*
         RaycastHit hit = ShootRay();
