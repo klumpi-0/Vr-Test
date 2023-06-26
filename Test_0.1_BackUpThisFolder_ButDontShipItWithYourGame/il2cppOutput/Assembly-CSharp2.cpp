@@ -12980,22 +12980,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Start_m6820D211A06B2E5E24795D7EBE6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Timer_Update_m3AC30EFD54E8E1010F6E601AE179212E71E6B2CD (Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* __this, const RuntimeMethod* method) 
 {
 	{
-		// if (TimerRunning)
+		// if (TimerRunning && !recordingFinished)
 		bool L_0 = __this->___TimerRunning_7;
 		if (!L_0)
 		{
-			goto IL_001a;
+			goto IL_0022;
+		}
+	}
+	{
+		bool L_1 = __this->___recordingFinished_8;
+		if (L_1)
+		{
+			goto IL_0022;
 		}
 	}
 	{
 		// time += Time.deltaTime;
-		float L_1 = __this->___time_6;
-		float L_2;
-		L_2 = Time_get_deltaTime_m7AB6BFA101D83E1D8F2EF3D5A128AEE9DDBF1A6D(NULL);
-		__this->___time_6 = ((float)il2cpp_codegen_add(L_1, L_2));
+		float L_2 = __this->___time_6;
+		float L_3;
+		L_3 = Time_get_deltaTime_m7AB6BFA101D83E1D8F2EF3D5A128AEE9DDBF1A6D(NULL);
+		__this->___time_6 = ((float)il2cpp_codegen_add(L_2, L_3));
 	}
 
-IL_001a:
+IL_0022:
 	{
 		// }
 		return;
