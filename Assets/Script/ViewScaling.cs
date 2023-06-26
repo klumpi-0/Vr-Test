@@ -32,6 +32,14 @@ public class ViewScaling : MonoBehaviour
         isGrabed = false;
         camera = Camera.main;
         StartMaterial = this.gameObject.GetComponent<MeshRenderer>().material;
+        var audioSources = GameObject.FindObjectsOfType<AudioSource>();
+        foreach(AudioSource audio in audioSources)
+        {
+            if(audio.gameObject.name == "MainAudioSource")
+            {
+                audioSource = audio;
+            }
+        }
     }
 
     // Update is called once per frame

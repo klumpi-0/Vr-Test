@@ -25025,24 +25025,26 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_4;
 	// UnityEngine.GameObject Timer::reference
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___reference_5;
+	// UnityEngine.Vector3 Timer::grabObjectStartPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___grabObjectStartPosition_6;
 	// System.Single Timer::time
-	float ___time_6;
+	float ___time_7;
 	// System.Boolean Timer::TimerRunning
-	bool ___TimerRunning_7;
+	bool ___TimerRunning_8;
 	// System.Boolean Timer::recordingFinished
-	bool ___recordingFinished_8;
+	bool ___recordingFinished_9;
 	// System.String Timer::fileName
-	String_t* ___fileName_9;
+	String_t* ___fileName_10;
 	// System.String Timer::ScalingType
-	String_t* ___ScalingType_10;
+	String_t* ___ScalingType_11;
 	// UnityEngine.GameObject Timer::startButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_12;
 	// UnityEngine.GameObject Timer::stopButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_13;
 	// UnityEngine.GameObject Timer::OutputTextObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_13;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_14;
 	// TMPro.TextMeshProUGUI Timer::outputText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_14;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_15;
 };
 
 // Oculus.Voice.Demo.BuiltInDemo.TimerController
@@ -29867,9 +29869,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6882[15] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6884[15] = 
 {
 	static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___sphere_4)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___middlePoint_5)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___laser_6)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___scaleObject_7)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startTransform_8)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___d0_9)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___ds_10)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___selectButtonText_11)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___rayHitMaterial_12)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___startMaterial_13)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___DebugText_14)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___raycastHit_15)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isGrabbed_16)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___isSelected_17)),static_cast<int32_t>(offsetof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A, ___lastIsSelected_18)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6885[11] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6885[12] = 
 {
-	static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___grabObject_4)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___reference_5)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___time_6)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___TimerRunning_7)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___recordingFinished_8)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___fileName_9)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___ScalingType_10)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___startButton_11)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___stopButton_12)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___OutputTextObject_13)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___outputText_14)),};
+	static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___grabObject_4)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___reference_5)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___grabObjectStartPosition_6)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___time_7)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___TimerRunning_8)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___recordingFinished_9)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___fileName_10)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___ScalingType_11)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___startButton_12)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___stopButton_13)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___OutputTextObject_14)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___outputText_15)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6886[3] = 
 {
 	static_cast<int32_t>(offsetof(UIDebugWindow_tBE2B5C126BF1EB2240009AC2E9C17CBB22788C38, ___canvas_4)),static_cast<int32_t>(offsetof(UIDebugWindow_tBE2B5C126BF1EB2240009AC2E9C17CBB22788C38, ___camera_5)),static_cast<int32_t>(offsetof(UIDebugWindow_tBE2B5C126BF1EB2240009AC2E9C17CBB22788C38, ___offset_6)),};

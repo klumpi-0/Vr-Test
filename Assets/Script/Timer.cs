@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Timer : MonoBehaviour
 {
 
     public GameObject grabObject;
     public GameObject reference;
+
+    public Vector3 grabObjectStartPosition;
 
     public float time;
     public bool TimerRunning;
@@ -29,6 +33,8 @@ public class Timer : MonoBehaviour
         time = 0f;
         TimerRunning = false;
         recordingFinished = false;
+        grabObject.GetComponent<XRGrabInteractable>().enabled = false;
+        grabObjectStartPosition = grabObject.transform.position;
         fileName = "ThisHeadset/result.txt";
     }
 
@@ -67,14 +73,19 @@ public class Timer : MonoBehaviour
         {
             startButton.SetActive(false);
             stopButton.SetActive(true);
+            grabObject.GetComponent<XRGrabInteractable>().enabled = true;
         }
         if (recordingFinished && !TimerRunning)
         {
             SaveDataOutputText();
             stopButton.SetActive(false);
             OutputTextObject.SetActive(true);
+            
+        }
+        if(recordingFinished && TimerRunning)
+        {
             // Load next Level here
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -92,7 +103,7 @@ public class Timer : MonoBehaviour
             var sr = File.CreateText(fileName);
         }
         var sw = File.AppendText(fileName);
-        string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString();
+        string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
         sw.WriteLine(output);
     }
 
@@ -100,7 +111,7 @@ public class Timer : MonoBehaviour
     {
 
         var finalTime = System.Math.Round(time, 2);
-        string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString();
+        string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
         outputText.text = output;
     }
 
@@ -112,5 +123,9 @@ public class Timer : MonoBehaviour
         return scaleComp;
     }
 
+    public void SetBackGrabObject()
+    {
+        grabObject.transform.position = grabObjectStartPosition + new Vector3(0, .5f, 0);
+    }
 
 }

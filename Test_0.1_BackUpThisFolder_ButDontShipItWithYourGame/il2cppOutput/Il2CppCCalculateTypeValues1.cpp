@@ -39539,24 +39539,26 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_4;
 	// UnityEngine.GameObject Timer::reference
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___reference_5;
+	// UnityEngine.Vector3 Timer::grabObjectStartPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___grabObjectStartPosition_6;
 	// System.Single Timer::time
-	float ___time_6;
+	float ___time_7;
 	// System.Boolean Timer::TimerRunning
-	bool ___TimerRunning_7;
+	bool ___TimerRunning_8;
 	// System.Boolean Timer::recordingFinished
-	bool ___recordingFinished_8;
+	bool ___recordingFinished_9;
 	// System.String Timer::fileName
-	String_t* ___fileName_9;
+	String_t* ___fileName_10;
 	// System.String Timer::ScalingType
-	String_t* ___ScalingType_10;
+	String_t* ___ScalingType_11;
 	// UnityEngine.GameObject Timer::startButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_12;
 	// UnityEngine.GameObject Timer::stopButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_13;
 	// UnityEngine.GameObject Timer::OutputTextObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_13;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_14;
 	// TMPro.TextMeshProUGUI Timer::outputText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_14;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_15;
 };
 
 // Oculus.Voice.Demo.BuiltInDemo.TimerController
