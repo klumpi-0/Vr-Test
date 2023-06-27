@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2619508925008195704}
   - component: {fileID: 2619508925008195705}
   - component: {fileID: 2619508925008195710}
+  - component: {fileID: 6849955306228983848}
   m_Layer: 0
   m_Name: StandartScalingCube
   m_TagString: Untagged
@@ -153,10 +154,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6849955306228983848}
+        m_TargetAssemblyTypeName: ChangeMaterialColor, Assembly-CSharp
+        m_MethodName: SetHoverMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6849955306228983848}
+        m_TargetAssemblyTypeName: ChangeMaterialColor, Assembly-CSharp
+        m_MethodName: SetStartMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -165,10 +190,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6849955306228983848}
+        m_TargetAssemblyTypeName: ChangeMaterialColor, Assembly-CSharp
+        m_MethodName: SetGrabMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6849955306228983848}
+        m_TargetAssemblyTypeName: ChangeMaterialColor, Assembly-CSharp
+        m_MethodName: SetStartMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -272,3 +321,19 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.5
+--- !u!114 &6849955306228983848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619508925008195708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2180a439ae727044cadb6d9cb6e20027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMaterial: {fileID: 0}
+  hoverMaterial: {fileID: 2100000, guid: 7a9d0cb8f130e0e41bf684a308673686, type: 2}
+  grabMaterial: {fileID: 2100000, guid: d96943bfd82302f44b4d987795d3b81b, type: 2}
+  renderer: {fileID: 0}
