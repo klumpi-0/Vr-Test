@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -27,6 +29,9 @@ public class Timer : MonoBehaviour
     public GameObject OutputTextObject;
     public TextMeshProUGUI outputText;
 
+    public string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScaSdM6IWYjlkWHJ78P1IEcHvm7uo54NvITWUPB6Erk2KbRGA/formResponse";    
+    public static string UserID = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +41,10 @@ public class Timer : MonoBehaviour
         grabObject.GetComponent<XRGrabInteractable>().enabled = false;
         grabObjectStartPosition = grabObject.transform.position;
         fileName = "ThisHeadset/result.txt";
+        if(UserID == null)
+        {
+            UserID = DateTime.Now.ToString("yyMMddHHmmssff");
+        }
     }
 
     // Update is called once per frame
@@ -105,14 +114,18 @@ public class Timer : MonoBehaviour
         var sw = File.AppendText(fileName);
         string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
         sw.WriteLine(output);
+
     }
 
     public void SaveDataOutputText()
     {
 
         var finalTime = System.Math.Round(time, 2);
-        string output = ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
+        string output = UserID + "\n" + ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
         outputText.text = output;
+
+        SendOutputToForms(ScalingType, finalTime.ToString(), HowCloseAreScales(reference.transform, grabObject.transform).ToString());
+
     }
 
     public float HowCloseAreScales(Transform referenceTrans, Transform grabObjectTrans)
@@ -128,4 +141,22 @@ public class Timer : MonoBehaviour
         grabObject.transform.position = grabObjectStartPosition + new Vector3(0, .5f, 0);
     }
 
+
+    public void SendOutputToForms(string Level, string Time, string Accuracy)
+    {
+        StartCoroutine(Post(Level, Time, Accuracy));
+    }
+
+    IEnumerator Post(string Level, string Time, string Accuracy)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("entry.816302759", UserID);
+        form.AddField("entry.2091973494", Level);
+        form.AddField("entry.1488930100", Time);
+        form.AddField("entry.1150572038", Accuracy);
+
+        UnityWebRequest www = UnityWebRequest.Post(URL, form);
+
+        yield return www.SendWebRequest();
+    }
 }

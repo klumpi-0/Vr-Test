@@ -1314,6 +1314,10 @@ PrefabInstance:
       propertyPath: grabObject
       value: 
       objectReference: {fileID: 570402189}
+    - target: {fileID: 6258094442064822208, guid: 940dde39c43c142438b946a8d325108a, type: 3}
+      propertyPath: ScalingType
+      value: View 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6258094442064822209, guid: 940dde39c43c142438b946a8d325108a, type: 3}
       propertyPath: m_Name
       value: Timer
