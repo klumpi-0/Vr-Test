@@ -36,6 +36,7 @@ public class Timer : MonoBehaviour
     public static List<int> scalingTypeOrder = null;
     public static List<int> scalingTypeOrderCopy = null;
     public static int currentScalingFactor = -1;
+    public static Queue<int> scalingTypeQueue_;
 
     public Text DebugText;
 
@@ -58,10 +59,9 @@ public class Timer : MonoBehaviour
         }
         if(scalingTypeOrder == null)
         {
-            scalingTypeOrder = this.GetComponent<ScalingOrder>().GetScalingTypeOrder();
-            scalingTypeOrderCopy = scalingTypeOrder;
+            scalingTypeQueue_ = this.GetComponent<ScalingOrder>().GetScalingTypeOrder();
         }
-        DebugText = Camera.current.gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
+        // DebugText = Camera.current.gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -158,6 +158,7 @@ public class Timer : MonoBehaviour
         float scaleComp = 1-((referenceTrans.localScale.x - grabObject.transform.localScale.x)
             + (referenceTrans.localScale.y - grabObject.transform.localScale.y)
             + (referenceTrans.localScale.z - grabObject.transform.localScale.z) /3);
+        Math.Round((double)scaleComp, 5);
         return scaleComp;
     }
 
@@ -198,6 +199,12 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            if(scalingTypeQueue_.Count == 0)
+            {
+                SceneManager.LoadScene(24);
+            }
+            SceneManager.LoadScene(scalingTypeQueue_.Dequeue());
+            /*
             if (scalingTypeOrder.Count == 0)
             {
                 scalingTypeOrder = scalingTypeOrderCopy;
@@ -224,7 +231,7 @@ public class Timer : MonoBehaviour
             scalingTypeOrder.RemoveAt(0);
             // Number of scenes before test + ()
             SceneManager.LoadScene(5 + (currentScalingFactor * currentTechnique));
-
+            */
         }
 
     }
