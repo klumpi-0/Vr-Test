@@ -32,6 +32,12 @@ public class Timer : MonoBehaviour
 
     public string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScaSdM6IWYjlkWHJ78P1IEcHvm7uo54NvITWUPB6Erk2KbRGA/formResponse";    
     public static string UserID = null;
+    public static List<int> scalingFactorList = null;
+    public static List<int> scalingTypeOrder = null;
+    public static List<int> scalingTypeOrderCopy = null;
+    public static int currentScalingFactor = -1;
+
+    public Text DebugText;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +52,16 @@ public class Timer : MonoBehaviour
         {
             UserID = DateTime.Now.ToString("HHmmss");
         }
+        if(scalingFactorList == null)
+        {
+            scalingFactorList = new List<int> { 1, 2, 3, 4, 5, 6 };
+        }
+        if(scalingTypeOrder == null)
+        {
+            scalingTypeOrder = this.GetComponent<ScalingOrder>().GetScalingTypeOrder();
+            scalingTypeOrderCopy = scalingTypeOrder;
+        }
+        DebugText = Camera.current.gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -102,7 +118,8 @@ public class Timer : MonoBehaviour
         if(recordingFinished && TimerRunning)
         {
             // Load next Level here
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            LoadNextLevel();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -175,6 +192,42 @@ public class Timer : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        if(SceneManager.GetActiveScene().buildIndex < 5)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            if (scalingTypeOrder.Count == 0)
+            {
+                scalingTypeOrder = scalingTypeOrderCopy;
+                scalingFactorList.Remove(currentScalingFactor);
+            }
+
+            if (scalingFactorList.Count == 0)
+            {
+                // Load GoodbyeLevel
+                SceneManager.LoadScene(24);
+            }
+
+            if (scalingTypeOrder.Count == 3)
+            {
+                var random = new System.Random();
+                int index = random.Next(scalingFactorList.Count);
+                currentScalingFactor = scalingFactorList[index];
+                if(DebugText != null)
+                {
+                    DebugText.text = currentScalingFactor.ToString();
+                }
+            }
+            int currentTechnique = scalingTypeOrder[0];
+            scalingTypeOrder.RemoveAt(0);
+            // Number of scenes before test + ()
+            SceneManager.LoadScene(5 + (currentScalingFactor * currentTechnique));
+
+        }
 
     }
+
+
 }

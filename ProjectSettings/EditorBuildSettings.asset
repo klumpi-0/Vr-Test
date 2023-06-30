@@ -6,26 +6,80 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StudyScene/SelectSclaingRoom.unity
+    guid: adc2a76eb6fdd3f42b94e94655faf55d
+  - enabled: 1
     path: Assets/Scenes/StudyScene/VRTraining.unity
     guid: eee2618d9112a134798cb75ff7c62c12
   - enabled: 1
-    path: Assets/Scenes/StudyScene/StudyRoom1 1.unity
-    guid: adc2a76eb6fdd3f42b94e94655faf55d
+    path: Assets/Scenes/StudyScene/TestScalingMethods.unity
+    guid: 051a387a763de6c4cae6257fd8e4a147
   - enabled: 1
-    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandart For 2.unity
-    guid: 240d0ccc8c218b74e817977b7d5bfd82
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandart For 2 Ref.unity
+    guid: 235de5837e4cadb4da241d06b09fb689
   - enabled: 1
-    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHand For 2.unity
-    guid: b018a3d708e76774e902364c7fbe6350
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHand For 2 Ref.unity
+    guid: dc66d1778b1bd7c488a4c6978092e72a
   - enabled: 1
-    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView For 2.unity
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView For 2_Ref.unity
     guid: 75f25bbca2e878f4aa06b83ae2edba4f
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView0.25.unity
+    guid: b2c62efabcd5aab49aaeaa4baf02cc69
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView0.5.unity
+    guid: e1e6460d5583d5a469fc4a84fd540ced
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView1.5.unity
+    guid: 596032ae2f236e94f9efca157bd1853a
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView2.unity
+    guid: affac784a088bf3488c5bd30987f5726
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView2.5.unity
+    guid: ea7e38fbeaa8f5f49af86633840917ec
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView3.unity
+    guid: 03d3dcdeece971342bb3a5eed00de8c4
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor0.25.unity
+    guid: ab4d8d247bd7746688b693f7fc163e1f
   - enabled: 1
     path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor0.5.unity
     guid: 9e6c2ab5eb20048469b990def847d24b
   - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor1.5.unity
+    guid: aa3c1a60b7bf447d4a008760f93e7b40
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandart For 2.unity
+    guid: 240d0ccc8c218b74e817977b7d5bfd82
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor2.5.unity
+    guid: 8855340baaf654c2b8e4c9c5afa0afff
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor3.unity
+    guid: f32a75d9004984170855dca31728566d
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor0.25.unity
+    guid: 72a950a4d06a5415da3d6958cf0776c0
+  - enabled: 1
     path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor0.5.unity
     guid: 55461b4fb414fe345b826afe6db0419d
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor1.5.unity
+    guid: 822e0b0527d7b4b1a88be4399c43476d
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHand For 2.unity
+    guid: b018a3d708e76774e902364c7fbe6350
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor2.5.unity
+    guid: ee1bf9bee441d4d5baf20a6b4026fc4a
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor3.unity
+    guid: 00d641ba53f4d4dd481fd784305d56c2
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/GoodbyeRoom.unity
+    guid: b2e111610ee316b4cb9f04aa8f5cd1be
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8f3e3b80bb5c65d4fa45ca9f5ddee9e3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a2819fa7cfcead44b9d602899a7d3296, type: 2}
