@@ -20,6 +20,7 @@ public class Timer : MonoBehaviour
     public float time;
     public bool TimerRunning;
     public bool recordingFinished;
+    public bool hideReferenceObject;
 
     private string fileName;
     public string ScalingType;
@@ -43,7 +44,7 @@ public class Timer : MonoBehaviour
         fileName = "ThisHeadset/result.txt";
         if(UserID == null)
         {
-            UserID = DateTime.Now.ToString("yyMMddHHmmssff");
+            UserID = DateTime.Now.ToString("HHmmss");
         }
     }
 
@@ -83,13 +84,20 @@ public class Timer : MonoBehaviour
             startButton.SetActive(false);
             stopButton.SetActive(true);
             grabObject.GetComponent<XRGrabInteractable>().enabled = true;
+            if (hideReferenceObject)
+            {
+                reference.GetComponent<Renderer>().enabled = false;
+            }
         }
         if (recordingFinished && !TimerRunning)
         {
             SaveDataOutputText();
             stopButton.SetActive(false);
             OutputTextObject.SetActive(true);
-            
+            if (hideReferenceObject)
+            {
+                reference.GetComponent<Renderer>().enabled = true;
+            }
         }
         if(recordingFinished && TimerRunning)
         {
@@ -121,11 +129,11 @@ public class Timer : MonoBehaviour
     {
 
         var finalTime = System.Math.Round(time, 2);
-        string output = UserID + "\n" + ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
+        // string output = UserID + "\n" + ScalingType + "\n" + finalTime + "\n" + HowCloseAreScales(reference.transform, grabObject.transform).ToString() + "\nPress button for next Test";
+        string output = "Press button for next Test";
         outputText.text = output;
 
-        SendOutputToForms(ScalingType, finalTime.ToString(), HowCloseAreScales(reference.transform, grabObject.transform).ToString());
-
+        SendOutputToForms(ScalingType, finalTime.ToString(), Math.Round(HowCloseAreScales(reference.transform, grabObject.transform), 3).ToString());
     }
 
     public float HowCloseAreScales(Transform referenceTrans, Transform grabObjectTrans)
@@ -141,7 +149,12 @@ public class Timer : MonoBehaviour
         grabObject.transform.position = grabObjectStartPosition + new Vector3(0, .5f, 0);
     }
 
-
+    /// <summary>
+    /// Upload measured values to google forms
+    /// </summary>
+    /// <param name="Level"></param>
+    /// <param name="Time"></param>
+    /// <param name="Accuracy"></param>
     public void SendOutputToForms(string Level, string Time, string Accuracy)
     {
         StartCoroutine(Post(Level, Time, Accuracy));
@@ -158,5 +171,10 @@ public class Timer : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Post(URL, form);
 
         yield return www.SendWebRequest();
+    }
+
+    public void LoadNextLevel()
+    {
+
     }
 }

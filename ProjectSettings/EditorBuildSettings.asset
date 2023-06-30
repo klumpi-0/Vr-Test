@@ -12,14 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/StudyScene/StudyRoom1 1.unity
     guid: adc2a76eb6fdd3f42b94e94655faf55d
   - enabled: 1
-    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandart1 1.unity
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandart For 2.unity
     guid: 240d0ccc8c218b74e817977b7d5bfd82
   - enabled: 1
-    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHand1.unity
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHand For 2.unity
     guid: b018a3d708e76774e902364c7fbe6350
   - enabled: 1
-    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView1.unity
+    path: Assets/Scenes/StudyScene/ViewScaling/ScaleView For 2.unity
     guid: 75f25bbca2e878f4aa06b83ae2edba4f
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/TwoHandScaling/ScaleStandartFor0.5.unity
+    guid: 9e6c2ab5eb20048469b990def847d24b
+  - enabled: 1
+    path: Assets/Scenes/StudyScene/OneHandScaling/ScaleOneHandFor0.5.unity
+    guid: 55461b4fb414fe345b826afe6db0419d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8f3e3b80bb5c65d4fa45ca9f5ddee9e3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a2819fa7cfcead44b9d602899a7d3296, type: 2}

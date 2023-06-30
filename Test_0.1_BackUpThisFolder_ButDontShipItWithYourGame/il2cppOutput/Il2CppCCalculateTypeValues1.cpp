@@ -11504,20 +11504,20 @@ struct ThreadPerformer_t97A1C94DA0E050C07BA95ED5F40487445F4A9360  : public Runti
 	CoroutinePerformer_t2423B696217C7475EF6AFE1D33000E8766703559* ____coroutine_6;
 };
 
-// Timer/<Post>d__25
-struct U3CPostU3Ed__25_tBE6CE6D83FC249847829A383BB77AFC52D6273E7  : public RuntimeObject
+// Timer/<Post>d__26
+struct U3CPostU3Ed__26_t164E8EEF01C298B896502B90F4E888A61FD266D9  : public RuntimeObject
 {
-	// System.Int32 Timer/<Post>d__25::<>1__state
+	// System.Int32 Timer/<Post>d__26::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Timer/<Post>d__25::<>2__current
+	// System.Object Timer/<Post>d__26::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// System.String Timer/<Post>d__25::Level
+	// System.String Timer/<Post>d__26::Level
 	String_t* ___Level_2;
-	// System.String Timer/<Post>d__25::Time
+	// System.String Timer/<Post>d__26::Time
 	String_t* ___Time_3;
-	// System.String Timer/<Post>d__25::Accuracy
+	// System.String Timer/<Post>d__26::Accuracy
 	String_t* ___Accuracy_4;
-	// Timer Timer/<Post>d__25::<>4__this
+	// Timer Timer/<Post>d__26::<>4__this
 	Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20* ___U3CU3E4__this_5;
 };
 
@@ -39593,26 +39593,28 @@ struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20  : public MonoBehaviour_t
 	bool ___TimerRunning_8;
 	// System.Boolean Timer::recordingFinished
 	bool ___recordingFinished_9;
+	// System.Boolean Timer::hideReferenceObject
+	bool ___hideReferenceObject_10;
 	// System.String Timer::fileName
-	String_t* ___fileName_10;
+	String_t* ___fileName_11;
 	// System.String Timer::ScalingType
-	String_t* ___ScalingType_11;
+	String_t* ___ScalingType_12;
 	// UnityEngine.GameObject Timer::startButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startButton_13;
 	// UnityEngine.GameObject Timer::stopButton
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_13;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___stopButton_14;
 	// UnityEngine.GameObject Timer::OutputTextObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_14;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___OutputTextObject_15;
 	// TMPro.TextMeshProUGUI Timer::outputText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_15;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___outputText_16;
 	// System.String Timer::URL
-	String_t* ___URL_16;
+	String_t* ___URL_17;
 };
 
 struct Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20_StaticFields
 {
 	// System.String Timer::UserID
-	String_t* ___UserID_17;
+	String_t* ___UserID_18;
 };
 
 // Oculus.Voice.Demo.BuiltInDemo.TimerController
@@ -49370,7 +49372,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize6884 = { sizeof(PokeRelaodSc
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize6885;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize6885 = { sizeof(ScalingGunPointer_tBA65E6BD8CE751D4095F459FC08A6D765356809A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize6886;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize6886 = { sizeof(U3CPostU3Ed__25_tBE6CE6D83FC249847829A383BB77AFC52D6273E7), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize6886 = { sizeof(U3CPostU3Ed__26_t164E8EEF01C298B896502B90F4E888A61FD266D9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize6887;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize6887 = { sizeof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20), -1, sizeof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize6888;

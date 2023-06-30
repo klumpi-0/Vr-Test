@@ -694,15 +694,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabObject: {fileID: 0}
   reference: {fileID: 0}
-  grabObjectStartTransform: {fileID: 0}
+  grabObjectStartPosition: {x: 0, y: 0, z: 0}
   time: 0
   TimerRunning: 0
   recordingFinished: 0
+  hideReferenceObject: 1
   ScalingType: Standart 2
   startButton: {fileID: 6258094441151061083}
   stopButton: {fileID: 6258094441098789173}
   OutputTextObject: {fileID: 6258094440775586628}
   outputText: {fileID: 6258094440775586630}
+  URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScaSdM6IWYjlkWHJ78P1IEcHvm7uo54NvITWUPB6Erk2KbRGA/formResponse
 --- !u!1 &7999822524917288072
 GameObject:
   m_ObjectHideFlags: 0
